@@ -1,0 +1,8 @@
+[server]
+name: yourname.dyndns.org/p
+path: public/p
+
+[ssh]
+server: 192.168.0.20
+user: pi
+

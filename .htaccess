@@ -1,0 +1,27 @@
+DirectoryIndex  index.html  index.php  /_h5ai/php/h5ai-index.php
+
+
+################################
+# h5ai %BUILD_VERSION%
+# customized .htaccess
+################################
+
+Options       +Indexes
+Options       +FollowSymLinks
+
+HeaderName    /_h5ai/apache/h5ai-header.html
+ReadmeName    /_h5ai/apache/h5ai-footer.html
+
+IndexIgnore   _h5ai*
+
+IndexOptions  Charset=UTF-8
+IndexOptions  FancyIndexing
+IndexOptions  FoldersFirst
+IndexOptions  HTMLTable
+IndexOptions  NameWidth=*
+IndexOptions  SuppressDescription
+IndexOptions  SuppressHTMLPreamble
+IndexOptions  SuppressRules
+IndexOptions  Type=text/html;h5ai=%BUILD_VERSION%
+IndexOptions  XHTML
+
