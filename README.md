@@ -34,6 +34,11 @@ This is to executed on your *Raspberry Pi*:
     sudo apt-get install rsync
     # make folder for synchronization
     mkdir -p /home/pi/public/p
+    cd /home/pi/public/p
+    nano .htaccess
+    # write in the open editor:
+    Options -Indexes
+    # save by hitting F2 and Y for yes
     # enable reading file for everyone (including the webserver)
     sudo chmod -R 755 p
     chmod +x $HOME
