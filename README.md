@@ -20,8 +20,15 @@ This is to be executed on your *desktop computer*:
     unzip master
     # rename the folder
     mv jazzer-push_public* push_public
-    # remove zip file
+    # remove downloaded zip file
     rm master
+    # make script avaible from everywhere
+    mkdir ~/bin
+    ln -s push_public/push-public.py ~/bin/push-public
+    echo 'PATH=$PATH:~/bin' >> ~/.bash_profile
+    echo 'export PATH' >> ~/.bash_profile
+    source ~/.bashrc
+
 
 This is to executed on your *Raspberry Pi*:
 
@@ -60,13 +67,13 @@ Make a profile for your Raspberry Pi in the profiles directory. You can start fr
 
 From your desktop computer, you then can push content, i.e. a file or a folder with one of these commands:
 
-    ./push_public.py pi testfile.txt
-    ./push_public.py pi testfolder
+    push_public pi testfile.txt
+    push_public pi testfolder
 
 If you want to generate links that are not protected by a random string in the url, you can add ```pub``` in the end, i.e.:
 
-    ./push_public.py pi testfile.txt pub
-    ./push_public.py pi testfolder pub
+    push_public pi testfile.txt pub
+    push_public pi testfolder pub
 
 
 What else?
