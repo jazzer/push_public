@@ -63,7 +63,7 @@ print 'will make %s' % link
 
 # rsync call
 # create folder via ssh
-remote_path = '%s/%s%s' % (path, random_string, output_file)#.replace(' ', '\ '))
+remote_path = '%s/%s%s' % (path, random_string, output_file if is_dir else '')
 command_line = ['ssh', '%s@%s' % (config.get('ssh', 'user'), ssh_server), 'mkdir', '-p', "'%s'" % remote_path]
 print command_line
 subprocess.call(command_line, shell=False)
@@ -82,6 +82,6 @@ if created_htaccess:
 
 # print link
 clipboard = gtk.clipboard_get()
-print 'Your link %s has been copied to clipboard' % link
+print 'your link %s has been copied to clipboard' % link
 clipboard.set_text(link)
 clipboard.store()
